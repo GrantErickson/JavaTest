@@ -14,7 +14,7 @@ on:
 
 jobs:
   build:
-    if: isPr
+    if: ${{ env.isPr }}
     runs-on: ubuntu-latest
 
     steps:
