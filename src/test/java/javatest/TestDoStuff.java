@@ -15,7 +15,7 @@ public class TestDoStuff {
     @Test
     public void testDoStuffFail() {
         DoStuff doStuff = new DoStuff(5, -1);
-        assertEquals(5, doStuff.Multiply());
+        assertEquals(-5, doStuff.Multiply());
     }
 
 }
