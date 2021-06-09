@@ -9,5 +9,12 @@ public class DoStuff {
         y=2;
     }
     
+    public DoStuff(int a, int b) {
+        x=a;
+        y=b;
+    }
 
+    public int Multiply(){
+        return x*y;
+    }
 }
