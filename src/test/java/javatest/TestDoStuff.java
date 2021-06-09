@@ -10,6 +10,7 @@ public class TestDoStuff {
     public void testDoStuff() {
         DoStuff doStuff = new DoStuff(1, 2);
         assertEquals(2, doStuff.Multiply());
+        assertEquals(3, doStuff.Multiply());
     }
 
 }
