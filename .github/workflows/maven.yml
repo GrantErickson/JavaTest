@@ -3,7 +3,7 @@
 
 name: Java CI with Maven
 env:
-  ispr: ${{ github.ref == 'refs/heads/main' }}
+  isPr: ${{ github.ref == 'refs/heads/main' }}
   
 on:
   push:
@@ -14,7 +14,7 @@ on:
 
 jobs:
   build:
-    if: ${{env.ispr}}
+    if: ${{isPr}}
     runs-on: ubuntu-latest
 
     steps:
