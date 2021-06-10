@@ -22,7 +22,6 @@
     </properties>
 
     <dependencies>
-
         <!-- junit 5, unit test -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -45,7 +44,7 @@
                     </excludes> -->
                 </configuration>
             </plugin>
-            
+
             <plugin>
               <groupId>org.jacoco</groupId>
               <artifactId>jacoco-maven-plugin</artifactId>
