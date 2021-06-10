@@ -71,7 +71,7 @@ jobs:
     environment: dev
     steps:
     - name: First Step
-      run: echo "Deploying ${{ environment.name }}"
+      run: echo "Deploying Dev"
     - name: Next Step
       run: echo "Secret Stuff ${{ secrets.MY_SECRET }}"
       
