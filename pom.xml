@@ -15,10 +15,13 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+
+        <sonar.projectKey>GrantErickson_JavaTest</sonar.projectKey>
+        <sonar.organization>granterickson</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
 
     <dependencies>
-
         <!-- junit 5, unit test -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -26,12 +29,11 @@
             <version>5.3.1</version>
             <scope>test</scope>
         </dependency>
-
     </dependencies>
+    
     <build>
         <finalName>maven-unit-test</finalName>
         <plugins>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -43,7 +45,42 @@
                 </configuration>
             </plugin>
 
+            <plugin>
+              <groupId>org.jacoco</groupId>
+              <artifactId>jacoco-maven-plugin</artifactId>
+              <version>0.8.7</version>
+              <executions>
+                  <execution>
+                      <goals>
+                          <goal>prepare-agent</goal>
+                      </goals>
+                  </execution>
+                  <execution>
+                      <id>report</id>
+                      <phase>test</phase>
+                      <goals>
+                          <goal>report</goal>
+                      </goals>
+                  </execution>
+              </executions>
+            </plugin>
         </plugins>
     </build>
+    <reporting>
+      <plugins>
+        <plugin>
+          <groupId>org.jacoco</groupId>
+          <artifactId>jacoco-maven-plugin</artifactId>
+          <reportSets>
+            <reportSet>
+              <reports>
+                <!-- select non-aggregate reports -->
+                <report>report</report>
+              </reports>
+            </reportSet>
+          </reportSets>
+        </plugin>
+      </plugins>
+    </reporting>
 
 </project>

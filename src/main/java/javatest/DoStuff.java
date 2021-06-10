@@ -14,7 +14,12 @@ public class DoStuff {
         y=b;
     }
 
-    public int Multiply(){
+    public int multiply(){
         return x*y;
+    }
+
+    
+    public int add(){
+        return x+y;
     }
 }
