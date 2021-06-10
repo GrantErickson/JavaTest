@@ -35,7 +35,10 @@ jobs:
       if: ${{ always() }}
       uses: scacap/action-surefire-report@v1
 
-  SonarQube:
+  sonar:
+    runs-on: ubuntu-latest
+
+    steps:
     - uses: actions/checkout@v2
       with:
         fetch-depth: '0'
