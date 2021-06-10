@@ -19,7 +19,7 @@ public class TestMagicBuilder {
     }
 
     @Test
-    public void testAdd2() {
+    public void testAdd1() {
         assertEquals(100, MagicBuilder.Add(99, 1));
         assertEquals(-10, MagicBuilder.Add(10, -20));
     }
