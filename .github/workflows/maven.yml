@@ -52,7 +52,7 @@ jobs:
     - name: First Step
       run: echo "Deploying Dev"
     - name: Next Step
-      run: echo "Secret Stuff: ${{secrets.MY_SECRET}}"
+      run: echo "Secret Stuff ${{ secrets.MY_SECRET }}"
       
   DeployTest:
     runs-on: ubuntu-latest
@@ -61,4 +61,4 @@ jobs:
     - name: First Step
       run: echo "Deploying Test"
     - name: Next Step
-      run: echo "Secret Stuff: ${{secrets.MY_SECRET}}"
+      run: echo "Secret Stuff ${{ secrets.MY_SECRET }}"
