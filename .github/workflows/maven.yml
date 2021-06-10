@@ -44,3 +44,21 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
+  
+  DeployDev:
+    runs-on: ubuntu-latest
+    environment: dev
+    steps:
+    - name: First Step
+      run: echo "Deploying Dev"
+    - name: Next Step
+      run: echo "Secret Stuff: ${{secrets.MY_SECRET}}"
+      
+  DeployTest:
+    runs-on: ubuntu-latest
+    environment: Test
+    steps:
+    - name: First Step
+      run: echo "Deploying Test"
+    - name: Next Step
+      run: echo "Secret Stuff: ${{secrets.MY_SECRET}}"
