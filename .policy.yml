@@ -1,0 +1,14 @@
+policy:
+  approval:
+    #- or:
+    #  - the devtools team has approved
+    #  - only staging files have changed
+  disapproval:
+    #requires:
+    #  organizations:
+
+# the list of rules
+approval_rules:
+
+options: 
+  allow_contributor: false
